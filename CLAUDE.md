@@ -22,25 +22,25 @@ Commands are organized by development workflow phase with namespace-style naming
 
 ```
 /commands/
-├── planning/           # plan:*
-│   ├── plan:feature.md - Analyzes requirements and creates detailed feature implementation plans
-│   └── plan:refactor.md - Analyzes code for refactoring opportunities
-├── analysis/           # analyze:*  
-│   ├── analyze:project.md - Provides comprehensive project health and metrics overview
-│   ├── analyze:security.md - Performs security vulnerability analysis and fixes
-│   └── analyze:performance.md - Performance bottleneck identification and optimization
-├── implementation/     # exec:*
-│   ├── exec:feature.md - Executes feature plans created by the planning commands
-│   └── exec:refactor.md - Implements refactoring recommendations
-├── quality/           # quality:*
-│   ├── quality:test.md - Generates comprehensive test suites with multiple test types
-│   └── quality:cleanup.md - Concise code cleanup and technical debt removal
-├── documentation/     # docs:*
-│   ├── docs:explain.md - Laconic code and architecture explanation generator
-│   └── docs:update-context.md - Updates CLAUDE.md based on recent code changes
-└── meta/             # meta:*
-    ├── meta:commit.md - Streamlined linting, formatting, and committing workflow
-    └── meta:suggest.md - Suggests relevant slash commands for current context
+├── plan/           # plan:*
+│   ├── feature.md - Analyzes requirements and creates detailed feature implementation plans
+│   └── refactor.md - Analyzes code for refactoring opportunities
+├── analyze/        # analyze:*  
+│   ├── project.md - Provides comprehensive project health and metrics overview
+│   ├── security.md - Performs security vulnerability analysis and fixes
+│   └── performance.md - Performance bottleneck identification and optimization
+├── exec/           # exec:*
+│   ├── feature.md - Executes feature plans created by the planning commands
+│   └── refactor.md - Implements refactoring recommendations
+├── quality/        # quality:*
+│   ├── test.md - Generates comprehensive test suites with multiple test types
+│   └── cleanup.md - Concise code cleanup and technical debt removal
+├── docs/           # docs:*
+│   ├── explain.md - Laconic code and architecture explanation generator
+│   └── update-context.md - Updates CLAUDE.md based on recent code changes
+└── meta/           # meta:*
+    ├── commit.md - Streamlined linting, formatting, and committing workflow
+    └── suggest.md - Suggests relevant slash commands for current context
 ```
 
 ### Command Categories
