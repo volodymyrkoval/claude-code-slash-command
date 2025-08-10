@@ -34,7 +34,8 @@ Commands are organized by development workflow phase with namespace-style naming
 │   └── refactor.md - Implements refactoring recommendations
 ├── quality/        # quality:*
 │   ├── test.md - Generates comprehensive test suites with multiple test types
-│   └── cleanup.md - Concise code cleanup and technical debt removal
+│   ├── cleanup.md - Concise code cleanup and technical debt removal
+│   └── validate.md - Validates implementation for bugs and errors
 ├── docs/           # docs:*
 │   ├── explain.md - Laconic code and architecture explanation generator
 │   ├── readme.md - Updates project README.md with current features and setup

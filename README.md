@@ -4,7 +4,7 @@ A curated collection of workflow-optimized slash commands for [Claude Code](http
 
 ## Overview
 
-This repository contains 14 workflow-optimized slash commands with namespace-style naming designed to accelerate development tasks:
+This repository contains 15 workflow-optimized slash commands with namespace-style naming designed to accelerate development tasks:
 
 - **Planning** (`plan:*`) - Requirements analysis and strategic planning
 - **Analysis** (`analyze:*`) - Deep analysis of project, security, and performance
@@ -59,6 +59,7 @@ Commands follow this namespace pattern:
 ### 🧪 Quality Phase (`quality:*`)
 - **`/quality:test`** - Generate comprehensive test suites (unit, integration, e2e)
 - **`/quality:cleanup`** - Remove unused code and technical debt
+- **`/quality:validate`** - Validate implementation for bugs and errors
 
 ### 📚 Documentation Phase (`docs:*`)
 - **`/docs:explain`** - Generate clear code and architecture explanations
@@ -79,8 +80,9 @@ Commands follow this namespace pattern:
 # 2. Execute the implementation
 /exec:feature user-auth
 
-# 3. Generate tests
+# 3. Generate tests and validate
 /quality:test module:auth
+/quality:validate module:auth
 
 # 4. Commit changes
 /meta:commit "feat: add OAuth authentication system"
@@ -122,6 +124,7 @@ Commands create structured output files for tracking and reference:
 - `OPTIMIZATION_REPORT.md` - Performance analysis and improvements
 - `SECURITY_REPORT.md` - Vulnerability assessments and fixes
 - `CLEANUP_REPORT.md` - Code quality issues and resolutions
+- `VALIDATION_REPORT.md` - Bug analysis and implementation validation
 - `PROJECT_OVERVIEW.md` - Comprehensive project health dashboard
 - `EXPLANATION.md` - Code and architecture documentation
 
