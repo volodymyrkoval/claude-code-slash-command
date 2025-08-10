@@ -37,6 +37,7 @@ Commands are organized by development workflow phase with namespace-style naming
 │   └── cleanup.md - Concise code cleanup and technical debt removal
 ├── docs/           # docs:*
 │   ├── explain.md - Laconic code and architecture explanation generator
+│   ├── readme.md - Updates project README.md with current features and setup
 │   └── update-context.md - Updates CLAUDE.md based on recent code changes
 └── meta/           # meta:*
     ├── commit.md - Streamlined linting, formatting, and committing workflow

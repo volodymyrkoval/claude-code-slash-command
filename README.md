@@ -4,7 +4,7 @@ A curated collection of workflow-optimized slash commands for [Claude Code](http
 
 ## Overview
 
-This repository contains 13 workflow-optimized slash commands with namespace-style naming designed to accelerate development tasks:
+This repository contains 14 workflow-optimized slash commands with namespace-style naming designed to accelerate development tasks:
 
 - **Planning** (`plan:*`) - Requirements analysis and strategic planning
 - **Analysis** (`analyze:*`) - Deep analysis of project, security, and performance
@@ -62,6 +62,7 @@ Commands follow this namespace pattern:
 
 ### 📚 Documentation Phase (`docs:*`)
 - **`/docs:explain`** - Generate clear code and architecture explanations
+- **`/docs:readme`** - Update project README.md with current features and setup
 - **`/docs:update-context`** - Keep CLAUDE.md synchronized with code changes
 
 ### 🔧 Meta/Workflow Phase (`meta:*`)
@@ -96,7 +97,8 @@ Commands follow this namespace pattern:
 # 3. Code cleanup
 /quality:cleanup all unused --aggressive
 
-# 4. Update documentation
+# 4. Update documentation  
+/docs:readme features
 /docs:update-context
 ```
 
