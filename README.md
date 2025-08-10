@@ -1,19 +1,19 @@
 # Claude Code Slash Commands
 
-A curated collection of optimized slash commands for [Claude Code](https://claude.ai/code) that streamline development workflows through structured, template-based automation.
+A curated collection of workflow-optimized slash commands for [Claude Code](https://claude.ai/code) using intuitive namespace-style naming (`type:command`) to streamline development workflows through structured automation.
 
 ## Overview
 
-This repository contains 13 workflow-optimized slash commands with intuitive prefixes designed to accelerate development tasks:
+This repository contains 13 workflow-optimized slash commands with namespace-style naming designed to accelerate development tasks:
 
-- **Planning** (`plan-*`) - Requirements analysis and strategic planning
-- **Analysis** (`analyze-*`) - Deep analysis of project, security, and performance
-- **Implementation** (`exec-*`) - Execution of planned changes and improvements  
-- **Quality** (`quality-*`) - Testing, cleanup, and quality assurance
-- **Documentation** (`docs-*`) - Documentation generation and maintenance
-- **Meta/Workflow** (`meta-*`) - Git workflow and command suggestions
+- **Planning** (`plan:*`) - Requirements analysis and strategic planning
+- **Analysis** (`analyze:*`) - Deep analysis of project, security, and performance
+- **Implementation** (`exec:*`) - Execution of planned changes and improvements  
+- **Quality** (`quality:*`) - Testing, cleanup, and quality assurance
+- **Documentation** (`docs:*`) - Documentation generation and maintenance
+- **Meta/Workflow** (`meta:*`) - Git workflow and command suggestions
 
-Each command follows a standardized compact format with `Usage: target[:name] [options] [--help]` syntax for quick comprehension and execution.
+Each command follows a namespace pattern (`type:command`) with standardized `Usage: target[:name] [options] [--help]` syntax for intuitive discovery and quick execution.
 
 ## Quick Start
 
@@ -28,88 +28,88 @@ git clone https://github.com/volodymyrkoval/claude-code-slash-command.git ~/.cla
 
 ### Basic Usage
 
-Commands follow this pattern:
+Commands follow this namespace pattern:
 ```bash
-/command-name [target] [options]
+/type:command [target] [options]
 ```
 
 **Examples:**
 ```bash
-/analyze-performance api:users speed --analyze-only  # Analyze API performance
-/quality-cleanup module:auth unused --dry-run       # Preview unused code cleanup
-/docs-explain function:calculateTotal               # Explain specific function
-/meta-commit "fix: resolve user validation bug"     # Commit with message
+/analyze:performance api:users speed --analyze-only  # Analyze API performance
+/quality:cleanup module:auth unused --dry-run       # Preview unused code cleanup
+/docs:explain function:calculateTotal               # Explain specific function
+/meta:commit "fix: resolve user validation bug"     # Commit with message
 ```
 
 ## Available Commands
 
-### 📋 Planning Phase (`plan-*`)
-- **`/plan-feature`** - Create detailed feature implementation plans
-- **`/plan-refactor`** - Identify refactoring opportunities and technical debt
+### 📋 Planning Phase (`plan:*`)
+- **`/plan:feature`** - Create detailed feature implementation plans
+- **`/plan:refactor`** - Identify refactoring opportunities and technical debt
 
-### 🔍 Analysis Phase (`analyze-*`)  
-- **`/analyze-project`** - Generate comprehensive project health dashboard
-- **`/analyze-security`** - Perform security vulnerability analysis and fixes
-- **`/analyze-performance`** - Identify and resolve performance bottlenecks
+### 🔍 Analysis Phase (`analyze:*`)  
+- **`/analyze:project`** - Generate comprehensive project health dashboard
+- **`/analyze:security`** - Perform security vulnerability analysis and fixes
+- **`/analyze:performance`** - Identify and resolve performance bottlenecks
 
-### ⚡ Implementation Phase (`exec-*`)
-- **`/exec-feature`** - Execute feature plans with phase-based implementation
-- **`/exec-refactor`** - Implement refactoring recommendations
+### ⚡ Implementation Phase (`exec:*`)
+- **`/exec:feature`** - Execute feature plans with phase-based implementation
+- **`/exec:refactor`** - Implement refactoring recommendations
 
-### 🧪 Quality Phase (`quality-*`)
-- **`/quality-test`** - Generate comprehensive test suites (unit, integration, e2e)
-- **`/quality-cleanup`** - Remove unused code and technical debt
+### 🧪 Quality Phase (`quality:*`)
+- **`/quality:test`** - Generate comprehensive test suites (unit, integration, e2e)
+- **`/quality:cleanup`** - Remove unused code and technical debt
 
-### 📚 Documentation Phase (`docs-*`)
-- **`/docs-explain`** - Generate clear code and architecture explanations
-- **`/docs-update-context`** - Keep CLAUDE.md synchronized with code changes
+### 📚 Documentation Phase (`docs:*`)
+- **`/docs:explain`** - Generate clear code and architecture explanations
+- **`/docs:update-context`** - Keep CLAUDE.md synchronized with code changes
 
-### 🔧 Meta/Workflow Phase (`meta-*`)
-- **`/meta-commit`** - Streamlined linting, formatting, and git commits
-- **`/meta-suggest`** - Get contextual command recommendations
+### 🔧 Meta/Workflow Phase (`meta:*`)
+- **`/meta:commit`** - Streamlined linting, formatting, and git commits
+- **`/meta:suggest`** - Get contextual command recommendations
 
 ## Command Examples
 
 ### Feature Development Workflow
 ```bash
 # 1. Plan the feature
-/plan-feature "add user authentication with OAuth"
+/plan:feature "add user authentication with OAuth"
 
 # 2. Execute the implementation
-/exec-feature user-auth
+/exec:feature user-auth
 
 # 3. Generate tests
-/quality-test module:auth
+/quality:test module:auth
 
 # 4. Commit changes
-/meta-commit "feat: add OAuth authentication system"
+/meta:commit "feat: add OAuth authentication system"
 ```
 
 ### Code Quality Workflow
 ```bash
 # 1. Security analysis
-/analyze-security all --fix
+/analyze:security all --fix
 
 # 2. Performance optimization
-/analyze-performance module:api speed --benchmark
+/analyze:performance module:api speed --benchmark
 
 # 3. Code cleanup
-/quality-cleanup all unused --aggressive
+/quality:cleanup all unused --aggressive
 
 # 4. Update documentation
-/docs-update-context
+/docs:update-context
 ```
 
 ### Analysis & Documentation
 ```bash
 # Explain complex code
-/docs-explain function:processPayment
+/docs:explain function:processPayment
 
 # Project health overview
-/analyze-project --detailed
+/analyze:project --detailed
 
 # Analyze refactoring needs
-/plan-refactor module:legacy
+/plan:refactor module:legacy
 ```
 
 ## Generated Files
@@ -133,8 +133,8 @@ Commands use a compact, standardized format that reduces cognitive load while ma
 
 ### 🎯 **Workflow-Optimized**
 - Commands organized by development lifecycle phase
-- Intuitive prefix-based naming for easy discovery
-- Tab completion enables quick command selection
+- Namespace-style naming (type:command) for clear categorization
+- Intuitive command structure enables quick discovery
 - Support various testing frameworks and linting tools
 
 ### 🔄 **Workflow Integration** 
@@ -160,19 +160,19 @@ Every command supports detailed help:
 ### Targeting Options
 Commands support flexible targeting:
 ```bash
-/analyze-performance api:users           # Specific API endpoint
-/analyze-performance file:src/utils.js   # Individual file
-/analyze-performance module:payment      # Entire module
-/analyze-performance all                 # Whole project (default)
+/analyze:performance api:users           # Specific API endpoint
+/analyze:performance file:src/utils.js   # Individual file
+/analyze:performance module:payment      # Entire module
+/analyze:performance all                 # Whole project (default)
 ```
 
 ### Execution Modes
 Many commands offer execution control:
 ```bash
-/analyze-security --fix           # Apply fixes automatically
-/quality-cleanup --dry-run        # Preview changes only
-/analyze-performance --analyze-only # Analysis without changes
-/exec-feature --phase 1           # Execute specific phase
+/analyze:security --fix           # Apply fixes automatically
+/quality:cleanup --dry-run        # Preview changes only
+/analyze:performance --analyze-only # Analysis without changes
+/exec:feature --phase 1           # Execute specific phase
 ```
 
 ## Architecture

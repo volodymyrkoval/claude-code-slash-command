@@ -18,39 +18,39 @@ This repository contains a collection of Claude Code slash commands implemented 
 
 ### Directory Structure
 
-Commands are organized by development workflow phase with consistent naming prefixes:
+Commands are organized by development workflow phase with namespace-style naming:
 
 ```
 /commands/
-├── planning/           # plan-*
-│   ├── plan-feature.md - Analyzes requirements and creates detailed feature implementation plans
-│   └── plan-refactor.md - Analyzes code for refactoring opportunities
-├── analysis/           # analyze-*  
-│   ├── analyze-project.md - Provides comprehensive project health and metrics overview
-│   ├── analyze-security.md - Performs security vulnerability analysis and fixes
-│   └── analyze-performance.md - Performance bottleneck identification and optimization
-├── implementation/     # exec-*
-│   ├── exec-feature.md - Executes feature plans created by the planning commands
-│   └── exec-refactor.md - Implements refactoring recommendations
-├── quality/           # quality-*
-│   ├── quality-test.md - Generates comprehensive test suites with multiple test types
-│   └── quality-cleanup.md - Concise code cleanup and technical debt removal
-├── documentation/     # docs-*
-│   ├── docs-explain.md - Laconic code and architecture explanation generator
-│   └── docs-update-context.md - Updates CLAUDE.md based on recent code changes
-└── meta/             # meta-*
-    ├── meta-commit.md - Streamlined linting, formatting, and committing workflow
-    └── meta-suggest.md - Suggests relevant slash commands for current context
+├── planning/           # plan:*
+│   ├── plan:feature.md - Analyzes requirements and creates detailed feature implementation plans
+│   └── plan:refactor.md - Analyzes code for refactoring opportunities
+├── analysis/           # analyze:*  
+│   ├── analyze:project.md - Provides comprehensive project health and metrics overview
+│   ├── analyze:security.md - Performs security vulnerability analysis and fixes
+│   └── analyze:performance.md - Performance bottleneck identification and optimization
+├── implementation/     # exec:*
+│   ├── exec:feature.md - Executes feature plans created by the planning commands
+│   └── exec:refactor.md - Implements refactoring recommendations
+├── quality/           # quality:*
+│   ├── quality:test.md - Generates comprehensive test suites with multiple test types
+│   └── quality:cleanup.md - Concise code cleanup and technical debt removal
+├── documentation/     # docs:*
+│   ├── docs:explain.md - Laconic code and architecture explanation generator
+│   └── docs:update-context.md - Updates CLAUDE.md based on recent code changes
+└── meta/             # meta:*
+    ├── meta:commit.md - Streamlined linting, formatting, and committing workflow
+    └── meta:suggest.md - Suggests relevant slash commands for current context
 ```
 
 ### Command Categories
 
-**Planning Phase** (`plan-*`): Strategic planning and requirement analysis
-**Analysis Phase** (`analyze-*`): Deep analysis of project, security, and performance
-**Implementation Phase** (`exec-*`): Execution of planned changes and improvements
-**Quality Phase** (`quality-*`): Testing, cleanup, and quality assurance
-**Documentation Phase** (`docs-*`): Documentation generation and maintenance
-**Meta/Workflow Phase** (`meta-*`): Git workflow and command suggestions
+**Planning Phase** (`plan:*`): Strategic planning and requirement analysis
+**Analysis Phase** (`analyze:*`): Deep analysis of project, security, and performance
+**Implementation Phase** (`exec:*`): Execution of planned changes and improvements
+**Quality Phase** (`quality:*`): Testing, cleanup, and quality assurance
+**Documentation Phase** (`docs:*`): Documentation generation and maintenance
+**Meta/Workflow Phase** (`meta:*`): Git workflow and command suggestions
 
 ### Key Patterns
 
@@ -77,14 +77,14 @@ Phase 4: Testing & Validation
 
 ### Basic Command Pattern
 ```bash
-/command-name [arguments] [--flags]
+/type:command [arguments] [--flags]
 ```
 
 ### Common Workflows
-1. **Feature Development**: `/plan-feature feature-name` → `/exec-feature feature-name` → `/meta-commit`
-2. **Code Quality**: `/analyze-security` → `/quality-test` → `/analyze-performance`  
-3. **Project Health**: `/analyze-project` → `/quality-cleanup` → `/docs-update-context`
-4. **Refactoring**: `/plan-refactor` → `/exec-refactor` → `/quality-test` → `/meta-commit`
+1. **Feature Development**: `/plan:feature feature-name` → `/exec:feature feature-name` → `/meta:commit`
+2. **Code Quality**: `/analyze:security` → `/quality:test` → `/analyze:performance`  
+3. **Project Health**: `/analyze:project` → `/quality:cleanup` → `/docs:update-context`
+4. **Refactoring**: `/plan:refactor` → `/exec:refactor` → `/quality:test` → `/meta:commit`
 
 ### Generated Files
 Commands create structured output files:
@@ -95,10 +95,10 @@ Commands create structured output files:
 ## Development Notes
 
 - No package.json or build system detected - this is a documentation/command repository
-- Commands follow workflow-phase organization with consistent naming prefixes for easy discovery
+- Commands follow workflow-phase organization with namespace-style naming for easy discovery
 - Commands are designed to work across different project types and tech stacks
 - Recent optimization focused on laconic, precise command structure (58% average line reduction)
 - Commands maintain full functionality while using standardized compact format
 - Each command includes comprehensive error handling and validation
 - Commands maintain compatibility with various testing frameworks and linting tools
-- Tab completion with prefixes enables intuitive command discovery by development phase
+- Namespace-style naming (type:command) enables intuitive command discovery by development phase
