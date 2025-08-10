@@ -1,45 +1,13 @@
-Please analyze and optimize performance for: $ARGUMENTS.
+Analyze and optimize performance for: $ARGUMENTS
 
-Follow these steps:
+Usage: target[:name] [type] [--analyze-only] [--benchmark] [--help]
+- Target: api, file, module, all (default)
+- Type: speed, memory, database, bundle
 
-0. Check for Help Flag:
-   If $ARGUMENTS contains --help or -h:
-   - Display command documentation
-   - Exit without executing
-
-1. **Parse Scope**:
-   - Target: `api:name`, `file:path`, `module:name`, or `all` (default)
-   - Type: `speed`, `memory`, `database`, `bundle`
-   - Options: `--analyze-only`, `--benchmark`
-
-2. **Find Bottlenecks**:
-   - Algorithm complexity (O(n²) → O(n))
-   - N+1 database queries
-   - Memory leaks and excessive allocation
-   - Large bundle dependencies
-   - Unnecessary loops and computations
-   - Missing caching opportunities
-
-3. **Generate OPTIMIZATION_REPORT.md**:
-   - List bottlenecks by severity (Critical >100ms, Major 10-100ms, Minor <10ms)
-   - Include current vs optimized code for each issue
-   - Show expected performance improvements
-   - Categorize as quick wins vs long-term improvements
-
-4. **Apply Optimizations** (unless --analyze-only):
-   - Replace slow algorithms with efficient ones
-   - Add caching and memoization where beneficial
-   - Fix N+1 queries with eager loading
-   - Implement lazy loading for heavy components
-   - Add database indexes if needed
-   - Replace heavy dependencies with lighter alternatives
-
-5. **Add Performance Tests**:
-   - Create benchmarks for critical paths
-   - Add performance assertions
-   - Set up monitoring hooks
-
-6. **Output Summary**:
-   Show applied optimizations, performance gains, and next steps.
+1. **Find Bottlenecks**: O(n²)→O(n), N+1 queries, memory leaks, large dependencies, unnecessary loops, missing cache
+2. **Generate OPTIMIZATION_REPORT.md**: List by severity (Critical >100ms, Major 10-100ms, Minor <10ms), show improvements
+3. **Apply Optimizations**: Replace slow algorithms, add caching, fix N+1 queries, lazy loading, indexes, lighter dependencies
+4. **Add Performance Tests**: Benchmarks, assertions, monitoring
+5. **Output Summary**: Show gains and next steps
 
 Focus on user-perceivable improvements and maintain code readability.

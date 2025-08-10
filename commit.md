@@ -1,42 +1,13 @@
-Please prepare and commit the current changes: $ARGUMENTS.
+Prepare and commit current changes: $ARGUMENTS
 
-Follow these steps:
+Usage: [message] [--help]
 
-0. Check for Help Flag:
-   If $ARGUMENTS contains --help or -h:
-   - Display command documentation
-   - Exit without executing
-
-1. **Run linters and formatters** to check code quality:
-   - Run the project's linter (e.g., `npm run lint`, `eslint .`, `pylint`, `rubocop`, etc.)
-   - Run code formatters (e.g., `prettier`, `black`, `gofmt`, etc.)
-   - Check for type errors if applicable (e.g., `tsc --noEmit`, `mypy`)
-
-2. **Fix all auto-fixable issues** without changing business logic:
-   - Apply automatic linter fixes (e.g., `eslint --fix`, `rubocop -a`)
-   - Apply formatter fixes (e.g., `prettier --write`, `black .`)
-   - Only fix style, formatting, and non-functional issues
-   - DO NOT modify any business logic, algorithms, or functional behavior
-
-3. **Review the changes** to ensure:
-   - No business logic was altered
-   - Only formatting, style, and linting issues were addressed
-   - All files are properly formatted
-
-4. **Stage the changes**:
-   - Use `git add -A` or selectively stage files with `git add <files>`
-   - Review staged changes with `git diff --staged`
-
-5. **Create an expressive but concise commit message**:
-   - Analyze the changes to understand what was modified
-   - Follow conventional commit format if applicable (e.g., `fix:`, `feat:`, `chore:`)
-   - Keep the message clear and under 50 characters for the subject line
-   - Add a body if needed to explain why (not what)
-   - Example: "chore: fix linting errors and format code"
-
-6. **Commit the changes**:
-   - Execute `git commit -m "<message>"`
-   - Verify the commit with `git log -1`
+1. **Run Quality Checks**: Linter, formatter, type checker
+2. **Auto-Fix**: Apply linter/formatter fixes (style only, NO business logic changes)  
+3. **Review**: Ensure only formatting/style changes applied
+4. **Stage**: `git add -A`, review with `git diff --staged`
+5. **Commit**: Create conventional commit message (<50 chars), execute `git commit`
+6. **Verify**: Check with `git log -1`
 
 Important constraints:
 - NEVER modify business logic, only fix style/formatting issues
