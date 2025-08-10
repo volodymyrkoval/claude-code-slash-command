@@ -4,12 +4,14 @@ A curated collection of optimized slash commands for [Claude Code](https://claud
 
 ## Overview
 
-This repository contains 13 laconic slash commands designed to accelerate common development tasks:
+This repository contains 13 workflow-optimized slash commands with intuitive prefixes designed to accelerate development tasks:
 
-- **Planning & Analysis** - Requirements analysis, project overview, refactoring assessment
-- **Execution** - Feature implementation, refactoring execution, code commits
-- **Testing & Quality** - Test generation, security scanning, performance optimization
-- **Documentation & Maintenance** - Code explanation, cleanup, documentation updates
+- **Planning** (`plan-*`) - Requirements analysis and strategic planning
+- **Analysis** (`analyze-*`) - Deep analysis of project, security, and performance
+- **Implementation** (`exec-*`) - Execution of planned changes and improvements  
+- **Quality** (`quality-*`) - Testing, cleanup, and quality assurance
+- **Documentation** (`docs-*`) - Documentation generation and maintenance
+- **Meta/Workflow** (`meta-*`) - Git workflow and command suggestions
 
 Each command follows a standardized compact format with `Usage: target[:name] [options] [--help]` syntax for quick comprehension and execution.
 
@@ -33,77 +35,81 @@ Commands follow this pattern:
 
 **Examples:**
 ```bash
-/optimize api:users speed --analyze-only     # Analyze API performance
-/cleanup module:auth unused --dry-run        # Preview unused code cleanup
-/explain function:calculateTotal             # Explain specific function
-/commit "fix: resolve user validation bug"   # Commit with message
+/analyze-performance api:users speed --analyze-only  # Analyze API performance
+/quality-cleanup module:auth unused --dry-run       # Preview unused code cleanup
+/docs-explain function:calculateTotal               # Explain specific function
+/meta-commit "fix: resolve user validation bug"     # Commit with message
 ```
 
 ## Available Commands
 
-### 📋 Planning & Analysis
-- **`/plan`** - Create detailed feature implementation plans
-- **`/overview`** - Generate comprehensive project health dashboard
-- **`/refactor-analyze`** - Identify refactoring opportunities and technical debt
+### 📋 Planning Phase (`plan-*`)
+- **`/plan-feature`** - Create detailed feature implementation plans
+- **`/plan-refactor`** - Identify refactoring opportunities and technical debt
 
-### ⚡ Execution  
-- **`/plan-execute`** - Execute feature plans with phase-based implementation
-- **`/refactor-execute`** - Implement refactoring recommendations
-- **`/commit`** - Streamlined linting, formatting, and git commits
+### 🔍 Analysis Phase (`analyze-*`)  
+- **`/analyze-project`** - Generate comprehensive project health dashboard
+- **`/analyze-security`** - Perform security vulnerability analysis and fixes
+- **`/analyze-performance`** - Identify and resolve performance bottlenecks
 
-### 🧪 Testing & Quality
-- **`/tests-generate`** - Generate comprehensive test suites (unit, integration, e2e)
-- **`/security-scan`** - Perform security vulnerability analysis and fixes
-- **`/optimize`** - Identify and resolve performance bottlenecks
-- **`/cleanup`** - Remove unused code and technical debt
+### ⚡ Implementation Phase (`exec-*`)
+- **`/exec-feature`** - Execute feature plans with phase-based implementation
+- **`/exec-refactor`** - Implement refactoring recommendations
 
-### 📚 Documentation & Maintenance
-- **`/explain`** - Generate clear code and architecture explanations
-- **`/claude-md-update`** - Keep CLAUDE.md synchronized with code changes
-- **`/suggest-commands`** - Get contextual command recommendations
+### 🧪 Quality Phase (`quality-*`)
+- **`/quality-test`** - Generate comprehensive test suites (unit, integration, e2e)
+- **`/quality-cleanup`** - Remove unused code and technical debt
+
+### 📚 Documentation Phase (`docs-*`)
+- **`/docs-explain`** - Generate clear code and architecture explanations
+- **`/docs-update-context`** - Keep CLAUDE.md synchronized with code changes
+
+### 🔧 Meta/Workflow Phase (`meta-*`)
+- **`/meta-commit`** - Streamlined linting, formatting, and git commits
+- **`/meta-suggest`** - Get contextual command recommendations
 
 ## Command Examples
 
 ### Feature Development Workflow
 ```bash
 # 1. Plan the feature
-/plan "add user authentication with OAuth"
+/plan-feature "add user authentication with OAuth"
 
 # 2. Execute the implementation
-/plan-execute user-auth
+/exec-feature user-auth
 
 # 3. Generate tests
-/tests-generate module:auth
+/quality-test module:auth
 
 # 4. Commit changes
-/commit "feat: add OAuth authentication system"
+/meta-commit "feat: add OAuth authentication system"
 ```
 
 ### Code Quality Workflow
 ```bash
 # 1. Security analysis
-/security-scan all --fix
+/analyze-security all --fix
 
 # 2. Performance optimization
-/optimize module:api speed --benchmark
+/analyze-performance module:api speed --benchmark
 
 # 3. Code cleanup
-/cleanup all unused --aggressive
+/quality-cleanup all unused --aggressive
 
 # 4. Update documentation
-/claude-md-update
+/docs-update-context
 ```
 
 ### Analysis & Documentation
 ```bash
 # Explain complex code
-/explain function:processPayment
+/docs-explain function:processPayment
 
 # Project health overview
-/overview --detailed
+/analyze-project --detailed
 
 # Analyze refactoring needs
-/refactor-analyze module:legacy
+/plan-refactor module:legacy
 ```
 
 ## Generated Files
@@ -125,10 +131,11 @@ Commands use a compact, standardized format that reduces cognitive load while ma
 - Standardized `Usage:` syntax across all commands
 - Condensed steps into numbered bullet points
 
-### 🎯 **Context-Aware**
-- Commands adapt to different project types and tech stacks
+### 🎯 **Workflow-Optimized**
+- Commands organized by development lifecycle phase
+- Intuitive prefix-based naming for easy discovery
+- Tab completion enables quick command selection
 - Support various testing frameworks and linting tools
-- Progressive disclosure from basic to advanced options
 
 ### 🔄 **Workflow Integration** 
 - Phase-based execution with checkpoints
@@ -153,19 +160,19 @@ Every command supports detailed help:
 ### Targeting Options
 Commands support flexible targeting:
 ```bash
-/optimize api:users           # Specific API endpoint
-/optimize file:src/utils.js   # Individual file
-/optimize module:payment      # Entire module
-/optimize all                 # Whole project (default)
+/analyze-performance api:users           # Specific API endpoint
+/analyze-performance file:src/utils.js   # Individual file
+/analyze-performance module:payment      # Entire module
+/analyze-performance all                 # Whole project (default)
 ```
 
 ### Execution Modes
 Many commands offer execution control:
 ```bash
-/security-scan --fix          # Apply fixes automatically
-/cleanup --dry-run            # Preview changes only
-/optimize --analyze-only      # Analysis without changes
-/plan-execute --phase 1       # Execute specific phase
+/analyze-security --fix           # Apply fixes automatically
+/quality-cleanup --dry-run        # Preview changes only
+/analyze-performance --analyze-only # Analysis without changes
+/exec-feature --phase 1           # Execute specific phase
 ```
 
 ## Architecture

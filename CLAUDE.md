@@ -18,33 +18,39 @@ This repository contains a collection of Claude Code slash commands implemented 
 
 ### Directory Structure
 
+Commands are organized by development workflow phase with consistent naming prefixes:
+
 ```
 /commands/
-├── planning-analysis/
-│   ├── plan.md - Analyzes requirements and creates detailed feature implementation plans
-│   ├── overview.md - Provides comprehensive project health and metrics overview
-│   └── refactor-analyze.md - Analyzes code for refactoring opportunities
-├── execution/
-│   ├── plan-execute.md - Executes feature plans created by the planning commands
-│   ├── refactor-execute.md - Implements refactoring recommendations
-│   └── commit.md - Streamlined linting, formatting, and committing workflow
-├── testing-quality/
-│   ├── tests-generate.md - Generates comprehensive test suites with multiple test types
-│   ├── security-scan.md - Performs security vulnerability analysis and fixes
-│   ├── optimize.md - Streamlined performance bottleneck identification and optimization
-│   └── cleanup.md - Concise code cleanup and technical debt removal
-└── documentation-maintenance/
-    ├── claude-md-update.md - Updates CLAUDE.md based on recent code changes
-    ├── suggest-commands.md - Suggests relevant slash commands for current context
-    └── explain.md - Laconic code and architecture explanation generator
+├── planning/           # plan-*
+│   ├── plan-feature.md - Analyzes requirements and creates detailed feature implementation plans
+│   └── plan-refactor.md - Analyzes code for refactoring opportunities
+├── analysis/           # analyze-*  
+│   ├── analyze-project.md - Provides comprehensive project health and metrics overview
+│   ├── analyze-security.md - Performs security vulnerability analysis and fixes
+│   └── analyze-performance.md - Performance bottleneck identification and optimization
+├── implementation/     # exec-*
+│   ├── exec-feature.md - Executes feature plans created by the planning commands
+│   └── exec-refactor.md - Implements refactoring recommendations
+├── quality/           # quality-*
+│   ├── quality-test.md - Generates comprehensive test suites with multiple test types
+│   └── quality-cleanup.md - Concise code cleanup and technical debt removal
+├── documentation/     # docs-*
+│   ├── docs-explain.md - Laconic code and architecture explanation generator
+│   └── docs-update-context.md - Updates CLAUDE.md based on recent code changes
+└── meta/             # meta-*
+    ├── meta-commit.md - Streamlined linting, formatting, and committing workflow
+    └── meta-suggest.md - Suggests relevant slash commands for current context
 ```
 
 ### Command Categories
 
-**Planning & Analysis:** Strategic commands for analysis and planning
-**Execution:** Implementation and execution commands  
-**Testing & Quality:** Quality assurance and optimization commands
-**Documentation & Maintenance:** Documentation and maintenance utilities
+**Planning Phase** (`plan-*`): Strategic planning and requirement analysis
+**Analysis Phase** (`analyze-*`): Deep analysis of project, security, and performance
+**Implementation Phase** (`exec-*`): Execution of planned changes and improvements
+**Quality Phase** (`quality-*`): Testing, cleanup, and quality assurance
+**Documentation Phase** (`docs-*`): Documentation generation and maintenance
+**Meta/Workflow Phase** (`meta-*`): Git workflow and command suggestions
 
 ### Key Patterns
 
@@ -75,9 +81,10 @@ Phase 4: Testing & Validation
 ```
 
 ### Common Workflows
-1. **Feature Development**: `/plan feature-name` → `/plan-execute feature-name` → `/commit`
-2. **Code Quality**: `/security-scan` → `/tests-generate` → `/optimize`  
-3. **Maintenance**: `/overview` → `/cleanup` → `/claude-md-update`
+1. **Feature Development**: `/plan-feature feature-name` → `/exec-feature feature-name` → `/meta-commit`
+2. **Code Quality**: `/analyze-security` → `/quality-test` → `/analyze-performance`  
+3. **Project Health**: `/analyze-project` → `/quality-cleanup` → `/docs-update-context`
+4. **Refactoring**: `/plan-refactor` → `/exec-refactor` → `/quality-test` → `/meta-commit`
 
 ### Generated Files
 Commands create structured output files:
@@ -88,9 +95,10 @@ Commands create structured output files:
 ## Development Notes
 
 - No package.json or build system detected - this is a documentation/command repository
-- Commands are organized by purpose in dedicated directories for improved maintainability
+- Commands follow workflow-phase organization with consistent naming prefixes for easy discovery
 - Commands are designed to work across different project types and tech stacks
 - Recent optimization focused on laconic, precise command structure (58% average line reduction)
 - Commands maintain full functionality while using standardized compact format
 - Each command includes comprehensive error handling and validation
 - Commands maintain compatibility with various testing frameworks and linting tools
+- Tab completion with prefixes enables intuitive command discovery by development phase
