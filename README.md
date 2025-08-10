@@ -4,7 +4,7 @@ A curated collection of workflow-optimized slash commands for [Claude Code](http
 
 ## Overview
 
-This repository contains 15 workflow-optimized slash commands with namespace-style naming designed to accelerate development tasks:
+This repository contains 16 workflow-optimized slash commands with namespace-style naming designed to accelerate development tasks:
 
 - **Planning** (`plan:*`) - Requirements analysis and strategic planning
 - **Analysis** (`analyze:*`) - Deep analysis of project, security, and performance
@@ -38,6 +38,7 @@ Commands follow this namespace pattern:
 /analyze:performance api:users speed --analyze-only  # Analyze API performance
 /quality:cleanup module:auth unused --dry-run       # Preview unused code cleanup
 /docs:explain function:calculateTotal               # Explain specific function
+/meta:discuss patterns:error-handling               # Discuss error handling approaches
 /meta:commit "fix: resolve user validation bug"     # Commit with message
 ```
 
@@ -68,6 +69,7 @@ Commands follow this namespace pattern:
 
 ### 🔧 Meta/Workflow Phase (`meta:*`)
 - **`/meta:commit`** - Streamlined linting, formatting, and git commits
+- **`/meta:discuss`** - Discuss code and project topics without making changes
 - **`/meta:suggest`** - Get contextual command recommendations
 
 ## Command Examples
@@ -108,6 +110,9 @@ Commands follow this namespace pattern:
 ```bash
 # Explain complex code
 /docs:explain function:processPayment
+
+# Discuss architecture decisions
+/meta:discuss architecture:payment-flow
 
 # Project health overview
 /analyze:project --detailed

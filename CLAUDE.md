@@ -42,6 +42,7 @@ Commands are organized by development workflow phase with namespace-style naming
 │   └── update-context.md - Updates CLAUDE.md based on recent code changes
 └── meta/           # meta:*
     ├── commit.md - Streamlined linting, formatting, and committing workflow
+    ├── discuss.md - Discusses code and project topics without making changes
     └── suggest.md - Suggests relevant slash commands for current context
 ```
 
